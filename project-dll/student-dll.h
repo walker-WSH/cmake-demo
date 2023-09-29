@@ -1,0 +1,9 @@
+#pragma once
+
+#ifdef _MSC_VER
+#define EXPORT __declspec(dllexport)
+#else
+#define EXPORT __attribute__((visibility("default")))
+#endif
+
+EXPORT int addTest(int a, int b);
