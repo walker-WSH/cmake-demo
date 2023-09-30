@@ -1,4 +1,6 @@
-file(GLOB_RECURSE    SOURCES_main   *.c *.cpp *.h *.hpp) 
-add_executable(app ${SOURCES_main})
+set(PROJECT_NAME app)
 
-target_link_libraries(app PRIVATE project-lib)
+file(GLOB_RECURSE    SOURCES_main   *.c *.cpp *.h *.hpp) 
+add_executable(${PROJECT_NAME} ${SOURCES_main})
+
+target_link_libraries(${PROJECT_NAME} PRIVATE project-lib)

@@ -1,7 +1,10 @@
-file(GLOB_RECURSE    SOURCES_main   *.c *.cpp *.h *.hpp) 
-add_library(project-dll SHARED ${SOURCES_main})
+set(PROJECT_NAME project-dll)
 
-set_target_properties(project-dll PROPERTIES 
+
+file(GLOB_RECURSE    SOURCES_main   *.c *.cpp *.h *.hpp) 
+add_library(${PROJECT_NAME} SHARED ${SOURCES_main})
+
+set_target_properties(${PROJECT_NAME} PROPERTIES 
     RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/binTest"
 	PDB_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/binTest")
 	
@@ -23,4 +26,4 @@ function(copy_target_func target)
     VERBATIM)
 endfunction()
 
-copy_target_func(project-dll)
+copy_target_func(${PROJECT_NAME})
