@@ -1,8 +1,20 @@
 set(PROJECT_NAME project-dll)
 
 
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} TEST_LIST)
+FOREACH(item ${TEST_LIST})
+    message("-----------------aux_source_directory : ${item}")
+ENDFOREACH(item) 
+
+
+
 file(GLOB_RECURSE    SOURCES_main   *.c *.cpp *.h *.hpp) 
 add_library(${PROJECT_NAME} SHARED ${SOURCES_main})
+
+FOREACH(item ${SOURCES_main})
+    message("-----------------GLOB_RECURSE : ${item}")
+ENDFOREACH(item) 
+
 
 set_target_properties(${PROJECT_NAME} PROPERTIES 
     RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/binTest"
