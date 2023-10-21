@@ -5,7 +5,7 @@ cd %~dp0
 set _PROJECT_DIR=%~dp0
 set PROJECT_DIR=%_PROJECT_DIR:\=/%
 set SRC_DIR=%PROJECT_DIR%
-set APP_BUILD_DIR=%PROJECT_DIR%/build
+set APP_BUILD_DIR=%PROJECT_DIR%/build_x64
 
 
 cmake -Wno-dev ^
