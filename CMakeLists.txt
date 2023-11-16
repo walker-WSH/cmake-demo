@@ -8,6 +8,10 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 set(CMAKE_PDB_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 
+# 对所有工程启用
+add_compile_options(-fsanitize=address)
+add_link_options(-fsanitize=address)
+
 add_subdirectory(app)
 add_subdirectory(project-dll)
 add_subdirectory(project-lib)
