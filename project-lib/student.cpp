@@ -3,5 +3,12 @@
 
 int addTest(int a, int b)
 {
-        return a + b;
+    char temp[1024];
+    temp[1025] = 4;
+
+    char* test = new char[1024];
+    test[1024] = 1l;
+    delete[] test;
+
+    return a + b;
 }

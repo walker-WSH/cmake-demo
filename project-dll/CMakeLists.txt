@@ -11,6 +11,8 @@ ENDFOREACH(item)
 file(GLOB_RECURSE    SOURCES_main   *.c *.cpp *.h *.hpp) 
 add_library(${PROJECT_NAME} SHARED ${SOURCES_main})
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
+
 FOREACH(item ${SOURCES_main})
     message("-----------------GLOB_RECURSE : ${item}")
 ENDFOREACH(item) 

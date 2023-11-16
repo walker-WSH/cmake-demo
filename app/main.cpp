@@ -1,10 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "student.h"
 
-int main() {
-        int c = addTest(999, 1);
-        printf("c = %d \n", c);
+void t()
+{
+    char* test = new char[1024];
 
-        getchar();
-        return 0;
+    int c = addTest(999, 1);
+
+    test[1023] = 1l;
+    delete[] test;
+    delete[] test;
+    printf("c = %d \n", c);
+
+    printf("c = %d \n", c);
+}
+
+int main() {
+    t();
+
+    getchar();
+    return 0;
 }
