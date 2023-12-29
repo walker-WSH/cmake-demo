@@ -1,5 +1,8 @@
 set(PROJECT_NAME project-dll)
 
+include(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/disable-api.cmake)
+RemoveDisabledWinAPI()
+
 
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} TEST_LIST)
 FOREACH(item ${TEST_LIST})

@@ -16,13 +16,13 @@ set(CMAKE_PDB_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 #add_compile_options(-fsanitize=address)
 #add_link_options(-fsanitize=address)
 
-InsertDisabledWinAPI()
+
+InsertDisabledWinAPI() # 该函数是对所有子工程应用了
+
 add_subdirectory(app)
 
-
-RemoveDisabledWinAPI()
+# 该工程内部会执行RemoveDisabledWinAPI 但之应用于该子工程 不影响后续的其他子工程
 add_subdirectory(project-dll)
 
 
-InsertDisabledWinAPI()
 add_subdirectory(project-lib)
