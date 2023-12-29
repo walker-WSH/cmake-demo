@@ -1,6 +1,5 @@
 
 macro(InsertDisabledWinAPI)
-	add_definitions(-Dsprintf=Deprecated_sprintf_use_snprintf)
 if(WIN32)
 	add_definitions(-Dsprintf_s=Deprecated_sprintf_s_use_vsnprintf_s)
 	add_definitions(-D_splitpath=Deprecated__splitpath)
@@ -49,7 +48,6 @@ endif()
 endmacro()
 
 macro(RemoveDisabledWinAPI)
-	remove_definitions(-Dsprintf=Deprecated_sprintf_use_snprintf)
 if(WIN32)
 	remove_definitions(-Dsprintf_s=Deprecated_sprintf_s_use_vsnprintf_s)
 	remove_definitions(-D_splitpath=Deprecated__splitpath)
