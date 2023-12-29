@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "student.h"
+#include <Windows.h>
 
 void t()
 {
@@ -10,6 +11,7 @@ void t()
 
 	//fopen_s(0, 0, 0);
 	//fopen(0, 0);
+	//CreateProcessA(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 	test[1023] = 1l;
 	delete[] test;
