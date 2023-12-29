@@ -1,3 +1,5 @@
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/disable-api.cmake)
+
 project(cmake_demo LANGUAGES CXX)
 
 
@@ -10,26 +12,7 @@ set(CMAKE_PDB_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 
 
 # 所有工程限制使用如下函数
-add_definitions(-Dfopen_s=DeprecatedCFunction)
-add_definitions(-Dfopen=Deprecated)
-add_definitions(-DCreateProcessA=Deprecated)
-add_definitions(-DLoadLibraryA=Deprecated)
-add_definitions(-DCreateDirectoryA=Deprecated)
-add_definitions(-DCreateDirectoryExA=Deprecated)
-add_definitions(-DRemoveDirectoryA=Deprecated)
-add_definitions(-DCreateFileA=Deprecated)
-add_definitions(-DDeleteFileA=Deprecated)
-add_definitions(-DFindFirstFileA=Deprecated)
-add_definitions(-DFindNextFileA=Deprecated)
-add_definitions(-DGetFileAttributesA=Deprecated)
-add_definitions(-DGetFileAttributesExA=Deprecated)
-add_definitions(-DGetFileSizeA=Deprecated)
-add_definitions(-GetFullPathNameAD=Deprecated)
-add_definitions(-DGetTempFileNameA=Deprecated)
-add_definitions(-DGetTempPathA=Deprecated)
-add_definitions(-DMoveFileA=Deprecated)
-add_definitions(-DSetFileAttributesA=Deprecated)
-add_definitions(-DSetFileAttributesExA=Deprecated)
+InsertDisabledWinAPI()
 
 
 # 对所有工程启用
