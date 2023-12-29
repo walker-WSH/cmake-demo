@@ -1,5 +1,25 @@
 set(PROJECT_NAME project-lib)
 
+# 所有工程限制使用如下函数
+remove_definitions(-DCreateProcessA=Deprecated)
+remove_definitions(-DLoadLibraryA=Deprecated)
+remove_definitions(-DCreateDirectoryA=Deprecated)
+remove_definitions(-DCreateDirectoryExA=Deprecated)
+remove_definitions(-DRemoveDirectoryA=Deprecated)
+remove_definitions(-DCreateFileA=Deprecated)
+remove_definitions(-DDeleteFileA=Deprecated)
+remove_definitions(-DFindFirstFileA=Deprecated)
+remove_definitions(-DFindNextFileA=Deprecated)
+remove_definitions(-DGetFileAttributesA=Deprecated)
+remove_definitions(-DGetFileAttributesExA=Deprecated)
+remove_definitions(-DGetFileSizeA=Deprecated)
+remove_definitions(-GetFullPathNameAD=Deprecated)
+remove_definitions(-DGetTempFileNameA=Deprecated)
+remove_definitions(-DGetTempPathA=Deprecated)
+remove_definitions(-DMoveFileA=Deprecated)
+remove_definitions(-DSetFileAttributesA=Deprecated)
+remove_definitions(-DSetFileAttributesExA=Deprecated)
+
 file(GLOB_RECURSE    SOURCES_main   *.c *.cpp *.h *.hpp) 
 add_library(${PROJECT_NAME} STATIC ${SOURCES_main})
 
