@@ -1,9 +1,4 @@
-include(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/disable-api.cmake)
-
 set(PROJECT_NAME project-lib)
-
-# 所有工程限制使用如下函数
-RemoveDisabledWinAPI()
 
 file(GLOB_RECURSE    SOURCES_main   *.c *.cpp *.h *.hpp) 
 add_library(${PROJECT_NAME} STATIC ${SOURCES_main})
