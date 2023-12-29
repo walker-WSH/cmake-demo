@@ -14,7 +14,7 @@ add_definitions(-Dfopen=Deprecated1)
 add_definitions(-Dfopen_s=Deprecated2)
 add_definitions(-DCreateProcessA=Deprecated3)
 add_definitions(-DLoadLibraryA=Deprecated4)
-
+add_definitions(-DCreateFileA=Deprecated5)
 
 
 # 对所有工程启用
