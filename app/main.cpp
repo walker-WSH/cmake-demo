@@ -4,21 +4,24 @@
 
 void t()
 {
-    char* test = new char[1024];
+	char* test = new char[1024];
 
-    int c = addTest(999, 1);
+	int c = addTest(999, 1);
 
-    test[1023] = 1l;
-    delete[] test;
-    delete[] test;
-    printf("c = %d \n", c);
+	//fopen_s(0, 0, 0);
+	//fopen(0, 0);
 
-    printf("c = %d \n", c);
+	test[1023] = 1l;
+	delete[] test;
+	delete[] test;
+	printf("c = %d \n", c);
+
+	printf("c = %d \n", c);
 }
 
 int main() {
-    t();
+	t();
 
-    getchar();
-    return 0;
+	getchar();
+	return 0;
 }
