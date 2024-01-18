@@ -1,6 +1,7 @@
 
 setlocal
 cd %~dp0
+call common_values.cmd
 
 set _PROJECT_DIR=%~dp0
 set PROJECT_DIR=%_PROJECT_DIR:\=/%

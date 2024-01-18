@@ -7,7 +7,7 @@ message(STATUS "------------- CONFIG3 = ${CONFIG3}")
 if(CONFIG STREQUAL "Debug")
 message(STATUS "--- yes, it is debug")
 #add_definitions(-D_TEST_DEBUG_)
-target_link_directories(project-dll PRIVATE C:/path/) # can't apply
+#target_link_directories(project-dll PRIVATE C:/path/) # can't apply
 else()
 message(STATUS "--- no, it is not debug")
 #add_definitions(-D_TEST_RELEASE_)
